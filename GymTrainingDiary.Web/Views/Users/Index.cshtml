@@ -1,0 +1,87 @@
+﻿@model IEnumerable<GymTrainingDiary.Data.Model.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Users list</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, htmlAttributes: new { @class = "btn btn-primary" })
+</p>
+
+
+
+<div class="table-responsive">
+
+    <table class="table table-hover table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="text-center">
+                    @Html.Label("Account type")
+                </th>
+                <th scope="col" class="text-center">
+                    @Html.Label("First name")
+                </th>
+                <th scope="col" class="text-center">
+                    @Html.Label("Second name")
+                </th>
+                <th scope="col" class="text-center">
+                    @Html.Label("Display name")
+                </th>
+                <th scope="col" class="text-center">
+                    @Html.Label("Last login date")
+                </th>
+                <th scope="col" class="text-center">
+
+                </th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+
+                <tr>
+                    <td class="text-center align-middle">
+                        @Html.DisplayFor(modelItem => item.AccountType.Name)
+                    </td>
+                    <td class="text-center align-middle">
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td class="text-center align-middle">
+                        @Html.DisplayFor(modelItem => item.SecondName)
+                    </td>
+                    <td class="text-center align-middle">
+                        @Html.DisplayFor(modelItem => item.DisplayName)
+                    </td>
+
+                    <td class="text-center align-middle">
+                        @Html.DisplayFor(modelItem => item.LastLoginDate)
+                    </td>
+
+                    <td class="text-center align-middle">
+
+                        <div class="btn-group">
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }, htmlAttributes: new { @class = "btn mr-1 btn-primary" })
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }, htmlAttributes: new { @class = "btn mr-1  btn-primary" })
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, htmlAttributes: new { @class = "btn btn-danger" })
+                        </div>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+
+@*@section OptionalFooter {
+
+        <div>
+            optional footer content
+        </div>
+
+    }*@

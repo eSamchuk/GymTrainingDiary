@@ -1,0 +1,58 @@
+﻿@model GymTrainingDiary.Data.Model.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Account type")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccountType.Name)
+        </dd>
+
+        <dt>
+            @Html.Label("First name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.Label("Second name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecondName)
+        </dd>
+
+        <dt>
+            @Html.Label("Display name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisplayName)
+        </dd>
+
+        <dt>
+            @Html.Label("Last login date")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastLoginDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
