@@ -127,7 +127,7 @@ namespace GymTrainingDiaryAPI.Controllers.v1
         [HttpGet("{id:int:min(1)}/Exercises")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<string> GetExercisesForEquipment(int id, IExerciseRepository exerciseRepository)
+        public ActionResult<string> GetExercisesForEquipment([FromRoute]int id, [FromServices]IExerciseRepository exerciseRepository)
         {
             var res = exerciseRepository.GetItemsByCondtion(x => x.RequiredEquipmentId == id);
 
