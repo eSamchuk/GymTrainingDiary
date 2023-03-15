@@ -15,7 +15,6 @@ namespace GymTrainingDiaryAPI.Controllers.v1
     [Route("api/v{version:apiVersion}/[controller]")]
     public class EquipmentController : ControllerBase
     {
-        private readonly IExerciseRepository exerciseRepository;
         private readonly IEquipmentRepository equipmentRepository;
         private readonly LinkGenerator linkGenerator;
 
@@ -29,11 +28,9 @@ namespace GymTrainingDiaryAPI.Controllers.v1
 
 
         public EquipmentController(
-            IExerciseRepository  exerciseRepository,
             IEquipmentRepository equipmentRepository,
             LinkGenerator linkGenerator)
         {
-            this.exerciseRepository = exerciseRepository;
             this.equipmentRepository = equipmentRepository;
             this.linkGenerator = linkGenerator;
         }
@@ -51,7 +48,7 @@ namespace GymTrainingDiaryAPI.Controllers.v1
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public ActionResult<EquipmentDTO> GetItemById([FromRoute] int id)
+        public ActionResult<EquipmentDTO> GetItemById(int id)
         {
             EquipmentDTO result = null;
 
@@ -68,7 +65,7 @@ namespace GymTrainingDiaryAPI.Controllers.v1
         [HttpDelete("{id:int:min(1)}")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Delete))]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult DeleteItem([FromRoute] int id)
+        public ActionResult DeleteItem(int id)
         {
             var itemToDelete = this.equipmentRepository.GetItemById(id);
 
@@ -83,7 +80,7 @@ namespace GymTrainingDiaryAPI.Controllers.v1
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Post))]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<EquipmentDTO> AddItem([FromBody] EquipmentModel model)
+        public ActionResult<EquipmentDTO> AddItem(EquipmentModel model)
         {
             if (model.Id != 0)
             {
@@ -111,7 +108,7 @@ namespace GymTrainingDiaryAPI.Controllers.v1
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Put))]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<EquipmentDTO> UpdateItem([FromBody] EquipmentModel model)
+        public ActionResult<EquipmentDTO> UpdateItem(EquipmentModel model)
         {
             if (model.Id == 0)
             {
@@ -130,9 +127,9 @@ namespace GymTrainingDiaryAPI.Controllers.v1
         [HttpGet("{id:int:min(1)}/Exercises")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public ActionResult<string> GetExercisesForEquipment([FromRoute] int id)
+        public ActionResult<string> GetExercisesForEquipment(int id, IExerciseRepository exerciseRepository)
         {
-            var res =  this.exerciseRepository.GetItemsByCondtion(x => x.RequiredEquipmentId == id);
+            var res = exerciseRepository.GetItemsByCondtion(x => x.RequiredEquipmentId == id);
 
             if (!res.Any()) return Ok("Nothing found");
 

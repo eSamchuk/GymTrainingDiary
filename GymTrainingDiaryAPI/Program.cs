@@ -70,7 +70,6 @@ builder.Services.AddApiVersioning(x =>
     x.DefaultApiVersion = ApiVersion.Default;
     x.AssumeDefaultVersionWhenUnspecified = true;
     x.ReportApiVersions = true;
-    //x.UnsupportedApiVersionStatusCode = 400;
 });
 
 builder.Services.AddEndpointsApiExplorer();

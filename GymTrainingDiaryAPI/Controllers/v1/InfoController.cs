@@ -31,6 +31,8 @@ namespace GymTrainingDiaryAPI.Controllers.v1
                 var controller = e.Metadata.OfType<ControllerActionDescriptor>()
                                           .FirstOrDefault();
 
+                if (controller == null) continue;
+
                 var action = controller != null ? $"{controller.ControllerName}.{controller.ActionName}" : null;
 
                 var controllerMethod = controller != null ? $"{controller.MethodInfo.Name}" : null;
