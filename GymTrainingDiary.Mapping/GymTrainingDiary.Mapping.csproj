@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GymTrainingDiary.DataAccess\GymTrainingDiary.DataAccess.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.DTO\GymTrainingDiary.DTO.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.Model\GymTrainingDiary.Model.csproj" />
+  </ItemGroup>
+
+</Project>

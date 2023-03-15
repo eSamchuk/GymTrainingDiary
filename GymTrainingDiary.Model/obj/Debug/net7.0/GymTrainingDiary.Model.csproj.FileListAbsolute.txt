@@ -1,0 +1,12 @@
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\bin\Debug\net7.0\GymTrainingDiary.Model.deps.json
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\bin\Debug\net7.0\GymTrainingDiary.Model.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\bin\Debug\net7.0\GymTrainingDiary.Model.pdb
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\obj\Debug\net7.0\GymTrainingDiary.Model.csproj.AssemblyReference.cache
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\obj\Debug\net7.0\GymTrainingDiary.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\obj\Debug\net7.0\GymTrainingDiary.Model.AssemblyInfoInputs.cache
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\obj\Debug\net7.0\GymTrainingDiary.Model.AssemblyInfo.cs
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\obj\Debug\net7.0\GymTrainingDiary.Model.csproj.CoreCompileInputs.cache
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\obj\Debug\net7.0\GymTrainingDiary.Model.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\obj\Debug\net7.0\refint\GymTrainingDiary.Model.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\obj\Debug\net7.0\GymTrainingDiary.Model.pdb
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Model\obj\Debug\net7.0\ref\GymTrainingDiary.Model.dll

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DTO\**" />
+    <EmbeddedResource Remove="DTO\**" />
+    <None Remove="DTO\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GymTrainingDiary.Abstractions\GymTrainingDiary.Abstractions.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.Data\GymTrainingDiary.Data.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.Utilities\GymTrainingDiary.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

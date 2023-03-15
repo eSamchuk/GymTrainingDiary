@@ -1,0 +1,432 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataAccess\\GymTrainingDiary.DataAccess.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Abstractions\\GymTrainingDiary.Abstractions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Abstractions\\GymTrainingDiary.Abstractions.csproj",
+        "projectName": "GymTrainingDiary.Abstractions",
+        "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Abstractions\\GymTrainingDiary.Abstractions.csproj",
+        "packagesPath": "C:\\Users\\evhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Abstractions\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\evhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DTO\\GymTrainingDiary.DTO.csproj": {
+                "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DTO\\GymTrainingDiary.DTO.csproj"
+              },
+              "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Utilities\\GymTrainingDiary.Utilities.csproj": {
+                "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Utilities\\GymTrainingDiary.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataAccess\\GymTrainingDiary.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataAccess\\GymTrainingDiary.DataAccess.csproj",
+        "projectName": "GymTrainingDiary.DataAccess",
+        "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataAccess\\GymTrainingDiary.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\evhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\evhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Abstractions\\GymTrainingDiary.Abstractions.csproj": {
+                "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Abstractions\\GymTrainingDiary.Abstractions.csproj"
+              },
+              "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Data\\GymTrainingDiary.Data.csproj": {
+                "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Data\\GymTrainingDiary.Data.csproj"
+              },
+              "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Utilities\\GymTrainingDiary.Utilities.csproj": {
+                "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Utilities\\GymTrainingDiary.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataHandling\\GymTrainingDiary.DataHandling.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataHandling\\GymTrainingDiary.DataHandling.csproj",
+        "projectName": "GymTrainingDiary.DataHandling",
+        "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataHandling\\GymTrainingDiary.DataHandling.csproj",
+        "packagesPath": "C:\\Users\\evhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataHandling\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\evhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Data\\GymTrainingDiary.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Data\\GymTrainingDiary.Data.csproj",
+        "projectName": "GymTrainingDiary.Data",
+        "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Data\\GymTrainingDiary.Data.csproj",
+        "packagesPath": "C:\\Users\\evhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\evhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataHandling\\GymTrainingDiary.DataHandling.csproj": {
+                "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataHandling\\GymTrainingDiary.DataHandling.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DTO\\GymTrainingDiary.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DTO\\GymTrainingDiary.DTO.csproj",
+        "projectName": "GymTrainingDiary.DTO",
+        "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DTO\\GymTrainingDiary.DTO.csproj",
+        "packagesPath": "C:\\Users\\evhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DTO\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\evhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataHandling\\GymTrainingDiary.DataHandling.csproj": {
+                "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.DataHandling\\GymTrainingDiary.DataHandling.csproj"
+              },
+              "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Utilities\\GymTrainingDiary.Utilities.csproj": {
+                "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Utilities\\GymTrainingDiary.Utilities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Utilities\\GymTrainingDiary.Utilities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Utilities\\GymTrainingDiary.Utilities.csproj",
+        "projectName": "GymTrainingDiary.Utilities",
+        "projectPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Utilities\\GymTrainingDiary.Utilities.csproj",
+        "packagesPath": "C:\\Users\\evhen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Utilities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\evhen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.12.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

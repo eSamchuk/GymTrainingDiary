@@ -1,0 +1,17 @@
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\bin\Debug\net7.0\GymTrainingDiary.DTO.deps.json
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\bin\Debug\net7.0\GymTrainingDiary.DTO.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\bin\Debug\net7.0\GymTrainingDiary.DTO.pdb
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\bin\Debug\net7.0\GymTrainingDiary.DataHandling.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\bin\Debug\net7.0\GymTrainingDiary.Utilities.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\bin\Debug\net7.0\GymTrainingDiary.DataHandling.pdb
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\bin\Debug\net7.0\GymTrainingDiary.Utilities.pdb
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\obj\Debug\net7.0\GymTrainingDiary.DTO.csproj.AssemblyReference.cache
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\obj\Debug\net7.0\GymTrainingDiary.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\obj\Debug\net7.0\GymTrainingDiary.DTO.AssemblyInfoInputs.cache
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\obj\Debug\net7.0\GymTrainingDiary.DTO.AssemblyInfo.cs
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\obj\Debug\net7.0\GymTrainingDiary.DTO.csproj.CoreCompileInputs.cache
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\obj\Debug\net7.0\GymTrainingDiary.DTO.csproj.CopyComplete
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\obj\Debug\net7.0\GymTrainingDiary.DTO.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\obj\Debug\net7.0\refint\GymTrainingDiary.DTO.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\obj\Debug\net7.0\GymTrainingDiary.DTO.pdb
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.DTO\obj\Debug\net7.0\ref\GymTrainingDiary.DTO.dll

@@ -1,0 +1,12 @@
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\bin\Debug\net7.0\GymTrainingDiary.Utilities.deps.json
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\bin\Debug\net7.0\GymTrainingDiary.Utilities.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\bin\Debug\net7.0\GymTrainingDiary.Utilities.pdb
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\obj\Debug\net7.0\GymTrainingDiary.Utilities.csproj.AssemblyReference.cache
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\obj\Debug\net7.0\GymTrainingDiary.Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\obj\Debug\net7.0\GymTrainingDiary.Utilities.AssemblyInfoInputs.cache
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\obj\Debug\net7.0\GymTrainingDiary.Utilities.AssemblyInfo.cs
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\obj\Debug\net7.0\GymTrainingDiary.Utilities.csproj.CoreCompileInputs.cache
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\obj\Debug\net7.0\GymTrainingDiary.Utilities.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\obj\Debug\net7.0\refint\GymTrainingDiary.Utilities.dll
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\obj\Debug\net7.0\GymTrainingDiary.Utilities.pdb
+C:\Users\evhen\source\repos\GymTrainingDiary\GymTrainingDiary.Utilities\obj\Debug\net7.0\ref\GymTrainingDiary.Utilities.dll

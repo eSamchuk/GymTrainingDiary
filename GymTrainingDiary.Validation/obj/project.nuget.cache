@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "uMEpVwdK9MHF0lFdCBCfi3PhRiVeDYIPep0XYPcWFC44qsFlrVTEymq1dNCqOa9IdHusyCuk1ILHFd3rP5CAtw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\evhen\\source\\repos\\GymTrainingDiary\\GymTrainingDiary.Validation\\GymTrainingDiary.Validation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\evhen\\.nuget\\packages\\fluentvalidation\\11.2.1\\fluentvalidation.11.2.1.nupkg.sha512",
+    "C:\\Users\\evhen\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.2\\fluentvalidation.aspnetcore.11.2.2.nupkg.sha512",
+    "C:\\Users\\evhen\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.1\\fluentvalidation.dependencyinjectionextensions.11.2.1.nupkg.sha512",
+    "C:\\Users\\evhen\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.1.0\\microsoft.extensions.dependencyinjection.abstractions.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

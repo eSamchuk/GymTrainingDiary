@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>30914f3e-4744-407a-a8e0-0b1ebd2c8902</UserSecretsId>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>ApiDoc.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="6.0.2" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GymTrainingDiary.Abstractions\GymTrainingDiary.Abstractions.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.DataAccess\GymTrainingDiary.DataAccess.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.DataHandling\GymTrainingDiary.DataHandling.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.Data\GymTrainingDiary.Data.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.Mapping\GymTrainingDiary.Mapping.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.Model\GymTrainingDiary.Model.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.Utilities\GymTrainingDiary.Utilities.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.Validation\GymTrainingDiary.Validation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\v2\" />
+  </ItemGroup>
+
+</Project>
