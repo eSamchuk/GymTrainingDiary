@@ -34,7 +34,7 @@ if (cacheSettings.IsEnabled)
 }
 
 ////AppMetrics
-////builder.ConfigurationAppMetrics();
+builder.ConfigurationAppMetrics();
 ////Instances
 builder.Services.ConfigureInstances();
 ////Tracing
@@ -86,6 +86,8 @@ if (app.Environment.IsDevelopment())
 app.MapHealthChecks("/healthcheck", new HealthCheckOptions { ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse });
 
 app.UseOpenTelemetryPrometheusScrapingEndpoint();
+
+////app.UseExecutionTimeCalculatorMiddleware();
 
 app.UseHttpLogging();
 

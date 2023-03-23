@@ -25,7 +25,7 @@ namespace GymTrainingDiaryAPI.Setup
                 .AddAspNetCoreInstrumentation()
                 .AddHttpClientInstrumentation()
                 .AddPrometheusExporter()
-                .AddMeter("MyMeter")
+                //.AddMeter("ExecutionTimeCalculator")
                 //.AddOtlpExporter(opt =>
                 //{
                 //    opt.Endpoint = new Uri("localhost:4317");

@@ -21,7 +21,7 @@ namespace GymTrainingDiaryAPI.Controllers.v1
     [ApiVersion("1.0", Deprecated = true)]
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
-    [ServiceFilter(typeof(ExecutionTimeMetrics))]
+    //[ServiceFilter(typeof(ExecutionTimeMetrics))]
     public class WorkoutsController : ControllerBase
     {
         private readonly IWorkoutRepository workoutRepo;
@@ -110,7 +110,7 @@ namespace GymTrainingDiaryAPI.Controllers.v1
 
             var dbResults = this.workoutRepo.GetPagedItems(page, perPage);
 
-            if (dbResults.Items?.Any() == true) return Ok("Nothing found, check parameters");
+            if (dbResults.Items?.Any() == false) return Ok("Nothing found, check parameters");
 
             var metadata = new
             {
