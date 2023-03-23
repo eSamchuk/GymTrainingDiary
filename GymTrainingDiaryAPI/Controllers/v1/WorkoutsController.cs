@@ -1,12 +1,17 @@
-﻿using GymTrainingDiary.DataAccess.Interfaces;
+﻿using GymTrainingDiary.Caching;
+using GymTrainingDiary.DataAccess.Interfaces;
 using GymTrainingDiary.DataHandling;
 using GymTrainingDiary.DTO;
 using GymTrainingDiary.Mapping.EntityToDto;
 using GymTrainingDiary.Mapping.ModelToEntity;
 using GymTrainingDiary.Model;
 using GymTrainingDiary.Utilities.Abstractions;
+using GymTrainingDiary.Utilities.ActionFifters;
 using GymTrainingDiary.Validation.ModelValidation.Workout;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Diagnostics.Metrics;
+using System.Text;
 using System.Text.Json;
 
 namespace GymTrainingDiaryAPI.Controllers.v1
@@ -16,11 +21,14 @@ namespace GymTrainingDiaryAPI.Controllers.v1
     [ApiVersion("1.0", Deprecated = true)]
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
+    //[ServiceFilter(typeof(ExecutionTimeMetrics))]
     public class WorkoutsController : ControllerBase
     {
         private readonly IWorkoutRepository workoutRepo;
         private readonly IWorkoutExerciseRepository workoutExerciseRepo;
         private readonly IUserRepository userRepository;
+        private readonly IDistributedCache distributedCache;
+
 
         private readonly LinkGenerator linkGenerator;
 
@@ -36,12 +44,14 @@ namespace GymTrainingDiaryAPI.Controllers.v1
             IWorkoutRepository workoutRepo,
             IWorkoutExerciseRepository workoutExerciseRepo,
             LinkGenerator linkGenerator,
-            IUserRepository userRepository)
+            IUserRepository userRepository,
+            IDistributedCache distributedCache)
         {
             this.workoutRepo = workoutRepo;
             this.workoutExerciseRepo = workoutExerciseRepo;
             this.linkGenerator = linkGenerator;
             this.userRepository = userRepository;
+            this.distributedCache = distributedCache;
         }
 
         [HttpGet("{id:int:min(1)}", Name = nameof(GetWorkoutById))]
@@ -66,13 +76,13 @@ namespace GymTrainingDiaryAPI.Controllers.v1
         }
 
         [HttpGet()]
+        [Cached(60)]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
         public ActionResult<ListDTO<WorkoutDTO>> GetAllWorkouts()
         {
             ListDTO<WorkoutDTO> result = new ListDTO<WorkoutDTO>();
 
             var dbResults = this.workoutRepo.GetAllItems();
-
             if (!dbResults.Any()) return Ok("No records found");
 
             result.TotalCount = dbResults.Count();
@@ -80,6 +90,7 @@ namespace GymTrainingDiaryAPI.Controllers.v1
 
             return Ok(result);
         }
+
 
         [HttpGet("Paged")]
         [ApiConventionMethod(typeof(DefaultApiConventions), nameof(DefaultApiConventions.Get))]
@@ -99,7 +110,7 @@ namespace GymTrainingDiaryAPI.Controllers.v1
 
             var dbResults = this.workoutRepo.GetPagedItems(page, perPage);
 
-            if (dbResults.Items?.Any() == true) return Ok("Nothing found, check parameters");
+            if (dbResults.Items?.Any() == false) return Ok("Nothing found, check parameters");
 
             var metadata = new
             {

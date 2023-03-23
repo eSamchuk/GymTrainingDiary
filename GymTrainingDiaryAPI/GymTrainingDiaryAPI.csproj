@@ -11,8 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="App.Metrics.Abstractions" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.AspNetCore.Endpoints" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.AspNetCore.Hosting" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.AspNetCore.Tracking" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.Extensions.DependencyInjection" Version="4.3.0" />
+    <PackageReference Include="App.Metrics.Formatters.Prometheus" Version="4.3.0" />
     <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="6.0.2" />
     <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="6.0.5" />
+    <PackageReference Include="Jaeger.Core" Version="1.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
@@ -23,6 +30,16 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.3" />
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.Console" Version="1.4.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.Jaeger" Version="1.4.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" Version="1.4.0" />
+    <PackageReference Include="OpenTelemetry.Exporter.Prometheus.AspNetCore" Version="1.5.0-alpha.1" />
+    <PackageReference Include="OpenTelemetry.Exporter.Zipkin" Version="1.4.0" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" Version="1.4.0" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" Version="1.0.0-rc9.14" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Http" Version="1.0.0-rc9.14" />
+    <PackageReference Include="prometheus-net" Version="8.0.0" />
+    <PackageReference Include="prometheus-net.AspNetCore" Version="8.0.0" />
     <PackageReference Include="Serilog" Version="2.12.0" />
     <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
@@ -30,6 +47,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GymTrainingDiary.Abstractions\GymTrainingDiary.Abstractions.csproj" />
+    <ProjectReference Include="..\GymTrainingDiary.Caching\GymTrainingDiary.Caching.csproj" />
     <ProjectReference Include="..\GymTrainingDiary.DataAccess\GymTrainingDiary.DataAccess.csproj" />
     <ProjectReference Include="..\GymTrainingDiary.DataHandling\GymTrainingDiary.DataHandling.csproj" />
     <ProjectReference Include="..\GymTrainingDiary.Data\GymTrainingDiary.Data.csproj" />

@@ -27,7 +27,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymTrainingDiary.NUnit", "G
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymTrainingDiary.xUnit", "GymTrainingDiary.xUnit\GymTrainingDiary.xUnit.csproj", "{586C9DE6-64FC-4043-A804-BE12B7F1ADA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymTrainingDiary.Validation", "GymTrainingDiary.Validation\GymTrainingDiary.Validation.csproj", "{7805A8CA-1286-4D5B-8971-31AB7713C9E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GymTrainingDiary.Validation", "GymTrainingDiary.Validation\GymTrainingDiary.Validation.csproj", "{7805A8CA-1286-4D5B-8971-31AB7713C9E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K6", "K6", "{83F90F28-FFC9-4672-9DAB-4D2B93AC0CBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{76CC1199-9CDE-4606-8576-C678780A4BDD}"
+	ProjectSection(SolutionItems) = preProject
+		K6\load-test.js = K6\load-test.js
+		K6\smoke-test.js = K6\smoke-test.js
+		K6\soak-test.js = K6\soak-test.js
+		K6\stress-test.js = K6\stress-test.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workouts", "Workouts", "{38B4BE9F-D5C5-4183-AD52-B2FFF4039C04}"
+	ProjectSection(SolutionItems) = preProject
+		K6\load-test.js = K6\load-test.js
+		K6\smoke-test.js = K6\smoke-test.js
+		K6\soak-test.js = K6\soak-test.js
+		K6\stress-test.js = K6\stress-test.js
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GymTrainingDiary.Caching", "GymTrainingDiary.Caching\GymTrainingDiary.Caching.csproj", "{F61538DC-40A6-4EB3-AB4A-F31830B664E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +103,10 @@ Global
 		{7805A8CA-1286-4D5B-8971-31AB7713C9E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7805A8CA-1286-4D5B-8971-31AB7713C9E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7805A8CA-1286-4D5B-8971-31AB7713C9E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F61538DC-40A6-4EB3-AB4A-F31830B664E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61538DC-40A6-4EB3-AB4A-F31830B664E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61538DC-40A6-4EB3-AB4A-F31830B664E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61538DC-40A6-4EB3-AB4A-F31830B664E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,6 +114,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{4D7B2C35-4853-43E8-80B8-01EA442E1D20} = {97B8C4DB-4411-4212-8694-D8F4BE5C7F94}
 		{586C9DE6-64FC-4043-A804-BE12B7F1ADA5} = {97B8C4DB-4411-4212-8694-D8F4BE5C7F94}
+		{76CC1199-9CDE-4606-8576-C678780A4BDD} = {83F90F28-FFC9-4672-9DAB-4D2B93AC0CBB}
+		{38B4BE9F-D5C5-4183-AD52-B2FFF4039C04} = {83F90F28-FFC9-4672-9DAB-4D2B93AC0CBB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5203E12D-2388-4B3B-9A13-2374052E792A}
