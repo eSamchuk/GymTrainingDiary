@@ -9,7 +9,7 @@ namespace GymTrainingDiaryAPI.Setup
     {
         public static void ConfigureInstances(this IServiceCollection services)
         {
-            services.AddSingleton(new CatchTimedOutRequestFilter());
+            services.AddSingleton(new ExecutionTimeMetrics());
             services.AddTransient<IExerciseRepository, ExerciseRepository>();
             services.AddTransient<IEquipmentRepository, EquipmentRepository>();
             services.AddTransient<IUserRepository, UserRepository>();

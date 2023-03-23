@@ -34,7 +34,7 @@ if (cacheSettings.IsEnabled)
 }
 
 ////AppMetrics
-builder.ConfigurationAppMetrics();
+////builder.ConfigurationAppMetrics();
 ////Instances
 builder.Services.ConfigureInstances();
 ////Tracing
@@ -64,11 +64,11 @@ builder.Services.AddApiVersioning(x =>
 });
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Host.UseMetricsEndpoints();
+////builder.Host.UseMetricsEndpoints();
 
 var app = builder.Build();
 
-app.UseEnvInfoEndpoint();
+////app.UseEnvInfoEndpoint();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -26,6 +26,10 @@ namespace GymTrainingDiaryAPI.Setup
                 .AddHttpClientInstrumentation()
                 .AddPrometheusExporter()
                 .AddMeter("MyMeter")
+                //.AddOtlpExporter(opt =>
+                //{
+                //    opt.Endpoint = new Uri("localhost:4317");
+                //})
                 .AddConsoleExporter();
             });
         }

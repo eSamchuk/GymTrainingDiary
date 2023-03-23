@@ -21,7 +21,7 @@ namespace GymTrainingDiaryAPI.Controllers.v1
     [ApiVersion("1.0", Deprecated = true)]
     [ApiVersion("2.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
-    [ServiceFilter(typeof(CatchTimedOutRequestFilter))]
+    [ServiceFilter(typeof(ExecutionTimeMetrics))]
     public class WorkoutsController : ControllerBase
     {
         private readonly IWorkoutRepository workoutRepo;
