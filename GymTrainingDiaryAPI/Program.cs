@@ -1,16 +1,12 @@
-using GymTrainingDiary.Data;
-using GymTrainingDiary.DataAccess.Interfaces;
-using GymTrainingDiary.DataAccess.Repositories;
+using GymTrainingDiary.Caching;
 using GymTrainingDiary.Utilities.Middleware;
+using GymTrainingDiaryAPI.Setup;
 using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using Serilog.Events;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,37 +21,33 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Host.UseSerilog();
 
-builder.Services
-    .AddHealthChecks()
-    .AddSqlServer(builder.Configuration.GetConnectionString("GymConnectionString"), name: "Gym")
-    .AddSqlServer(builder.Configuration.GetConnectionString("RecipesDb"), name: "Recipes");
+builder.WebHost.ConfigureKestrel(x => x.AllowSynchronousIO = true);
 
-builder.Services
-    .AddControllers(opt =>
-    {
-        opt.RespectBrowserAcceptHeader = true;
-    })
-    .AddJsonOptions(opt =>
-    {
-        opt.JsonSerializerOptions.WriteIndented = false;
-        opt.JsonSerializerOptions.AllowTrailingCommas = false;
-        opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-        opt.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault;
-        opt.JsonSerializerOptions.ReadCommentHandling = JsonCommentHandling.Skip;
-        opt.JsonSerializerOptions.UnknownTypeHandling = JsonUnknownTypeHandling.JsonElement;
-        opt.JsonSerializerOptions.NumberHandling = JsonNumberHandling.Strict;
-    })
-    .AddXmlSerializerFormatters();
 
-builder.Services.AddDbContext<GymTrainingDataContext>(x =>
+////Caching
+var cacheSettings = new CacheSettings();
+builder.Configuration.GetSection("RedisCache").Bind(cacheSettings);
+
+if (cacheSettings.IsEnabled)
 {
-    x.UseSqlServer(builder.Configuration.GetConnectionString("GymConnectionString"));
-}, ServiceLifetime.Scoped);
+    builder.Services.ConfigureRedisCache(cacheSettings);
+}
 
-builder.Services.AddStackExchangeRedisCache(opt =>
-{
-    opt.Configuration = builder.Configuration["RedisCache:Endpoint"];
-});
+////AppMetrics
+builder.ConfigurationAppMetrics();
+////Instances
+builder.Services.ConfigureInstances();
+////Tracing
+builder.Services.ConfigureOpenTelemetryTracing();
+////Metrics
+builder.Services.ConfigureOpenTelemetryMetrics();
+////DbContext
+builder.Services.ConfigureDbContext(builder.Configuration);
+////Health checks
+builder.ConfigureHealthChecks();
+////Responce formatting
+builder.Services.ConfigureOutputFormatting();
+
 
 builder.Services.AddSwaggerGen(x =>
 {
@@ -63,7 +55,6 @@ builder.Services.AddSwaggerGen(x =>
     x.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
     x.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
 });
-
 
 builder.Services.AddApiVersioning(x =>
 {
@@ -73,18 +64,11 @@ builder.Services.AddApiVersioning(x =>
 });
 
 builder.Services.AddEndpointsApiExplorer();
+builder.Host.UseMetricsEndpoints();
 
-builder.Services.AddTransient<IExerciseRepository, ExerciseRepository>();
-builder.Services.AddTransient<IEquipmentRepository, EquipmentRepository>();
-builder.Services.AddTransient<IUserRepository, UserRepository>();
-builder.Services.AddTransient<IWorkoutRepository, WorkoutsRepository>();
-builder.Services.AddTransient<IWorkoutExerciseRepository, WorkoutExerciseRepository>();
-builder.Services.AddSingleton(Log.Logger);
-builder.Services.AddControllers();
-
-//builder.Services.ConfigureOptions<SwaggerUIConfiguration>();
 var app = builder.Build();
 
+app.UseEnvInfoEndpoint();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -100,6 +84,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapHealthChecks("/healthcheck", new HealthCheckOptions { ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse });
+
+app.UseOpenTelemetryPrometheusScrapingEndpoint();
 
 app.UseHttpLogging();
 

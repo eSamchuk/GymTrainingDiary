@@ -77,7 +77,7 @@ namespace GymTrainingDiary.DataAccess.Repositories
         {
             var existingItem = this.GetItemById(itemToUpdate.Id);
 
-            if (existingItem != null) return null;
+            if (existingItem == null) return null;
 
             existingItem.FirstName = itemToUpdate.FirstName;
             existingItem.LastName = itemToUpdate.LastName;
